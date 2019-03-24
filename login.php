@@ -6,7 +6,10 @@
 </head>
 
 <body>
-Username: <input type="text" id="user" name="user"/>
-<input type="submit" value="Submit"/>
+    <form action="results.php" method="POST">
+        Username: <input type="text" id="user" name="user"/>
+        <input type="submit" value="Submit"/>
+    </form>
+
 </body>
-</html>
+</html> 
