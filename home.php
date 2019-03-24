@@ -1,3 +1,6 @@
+<!DOCTYPE html>
+<head></head>
+<body>
 <?php
     session_start();
 
@@ -12,3 +15,8 @@
     }
     echo "Congratulations! Successful Login!"
 ?>
+    <form action="buff-logout.php" method="post">
+        <input type="submit" value="Logout">
+    </form>
+</body>
+</html>
