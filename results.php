@@ -1,5 +1,7 @@
 
 <?php
+    session_start();
+
     if(isset($_POST['user'])){
         //Open using file handler
         $h= fopen("users.txt", "r");
@@ -16,11 +18,13 @@
         //Checking if validator returned true or false to check if username was in txt file.
         if($validator== TRUE){
             echo "Success";
+            $_SESSION['login_user'] = $_POST['user'];
+            header("Location: buff-Success.php");
         }
         else{
-            echo "Failed";
+            header("Location: buff-Failure.php");
         }
-        //Close file
         fclose($h);
+        exit();
     }
     ?>

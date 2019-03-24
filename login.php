@@ -10,6 +10,5 @@
         Username: <input type="text" id="user" name="user"/>
         <input type="submit" value="Submit"/>
     </form>
-
 </body>
 </html> 
