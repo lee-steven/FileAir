@@ -1,0 +1,149 @@
+/* comes into effect for screens larger than or equal to 481 pixels */
+@media screen and (min-width: 500px) {
+    
+    html{
+        font-family: 'Heebo', sans-serif;
+        background: #698ff0;
+    }
+    
+    h1{
+        margin-top: 170px;
+        text-align:center;
+        font-size:120px;
+        color: white;
+    }
+
+    h3{
+        text-align:center;
+        font-size: 24px;
+        font-weight: bold;
+        margin-top: 100px;
+        margin-bottom: 0px;
+    }
+
+    h4{
+        font-size: 14px;
+        font-weight: bold;
+        margin-top:10px;
+        margin-bottom:30px;
+    }
+    
+    main{
+        text-align: center;
+        width:450px;
+        height:500px;
+        margin:auto;
+        margin-top:100px;
+        background: white;
+        border:solid 0.6px;
+        border-color:#698ff0;
+        border-radius: 10px;
+    }
+    
+    #enter{
+        margin-top:15px;
+        border:none;
+        border-radius:5px;
+        background: white;
+        width: 300px;
+        height: 50px;
+        color: #698ff0;
+        font-weight: medium;
+        font-size:16px;
+        cursor: pointer;
+    }
+
+    #enter:hover{
+        background:#698ff0;
+        color: white;
+        border:none;
+        border:solid 2px;
+        border-color: white;
+    }
+
+    .enter_button{
+        text-align: center;
+    }
+
+    #user{
+        width: 300px;
+        height: 50px;
+        font-size: 16px;
+        border:none;
+        border:solid 1px;
+        border-radius:5px;
+        border-color:#E4E4E4;
+    }
+
+    #sign_in{
+        margin-top:15px;
+        border:none;
+        border-radius:5px;
+        background: #698ff0;
+        width: 300px;
+        height: 50px;
+        color: white;
+        font-weight: medium;
+        font-size:16px;
+        cursor:pointer;
+    }
+
+    #sign_in:hover{
+        background: white;
+        color: #698ff0;
+        border: none;
+        border:solid 2px;
+        border-color:#698ff0;
+    }
+}
+
+/* comes into effect for screens less than or equal to 320 pixels */
+@media screen and (max-width: 499px) {
+    html{
+        font-family: 'Heebo', sans-serif;
+        background: white;
+    }
+    
+    h3{
+        text-align:center;
+        font-size: 24px;
+        font-weight: bold;
+        margin-top: 100px;
+        margin-bottom: 0px;
+    }
+
+    h4{
+        font-size: 14px;
+        font-weight: bold;
+        margin-top:10px;
+        margin-bottom:30px;
+    }
+    
+    main{
+        text-align: center;
+        margin:auto;
+        margin-top:100px;
+    }
+    
+    #user{
+        width: 300px;
+        height: 50px;
+        font-size: 16px;
+        border:none;
+        border:solid 1px;
+        border-radius:5px;
+        border-color:#E4E4E4;
+    }
+
+    #sign_in{
+        margin-top:15px;
+        border:none;
+        border-radius:5px;
+        background: #698ff0;
+        width: 300px;
+        height: 50px;
+        color: white;
+        font-weight: medium;
+        font-size:16px;
+    }
+}

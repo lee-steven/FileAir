@@ -3,10 +3,12 @@
 <head>
     <title>Login</title>
     <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel = "stylesheet" type = "text/css" href = "CSS/stylesheet.css" />
+    <link href="https://fonts.googleapis.com/css?family=Heebo:300" rel="stylesheet">
 </head>
 
 <body>
-
 <?php
     session_start();
 
@@ -37,9 +39,14 @@
     }
     ?>
 
-    <form method="POST">
-        Username: <input type="text" id="user" name="user"/>
-        <input type="submit" value="Submit"/>
-    </form>
+    <main>
+        <h3>Sign in</h3>
+        <h4>to continue to share.</h4>
+        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
+            <input type="text" id="user" name="user" />
+            </br>
+            <input type="submit" id="sign_in" value="Sign in"/>
+        </form>
+    </main>
 </body>
 </html> 
