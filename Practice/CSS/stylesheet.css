@@ -3,14 +3,29 @@
     
     html{
         font-family: 'Heebo', sans-serif;
-        background: white;
+
     }
-    
+
+
+    body{
+        background: url(Background.jpg);
+        background-position: center;
+    }
+
+    .logo{
+        height:90px;
+        width:90px;
+        margin-bottom:0px;
+        margin-top:50px;
+    }
+
     h1{
+        font-family: 'Montserrat', sans-serif;
+        /* font-family: 'Questrial', sans-serif; */
         margin-top: 170px;
         text-align:center;
-        font-size:120px;
-        color: white;
+        font-size:180px;
+        color: black;
         margin-bottom: 0px;
     }
 
@@ -18,7 +33,7 @@
         text-align:center;
         font-size: 24px;
         font-weight: bold;
-        margin-top: 100px;
+        margin-top: 15px;
         margin-bottom: 0px;
     }
 
@@ -30,6 +45,7 @@
     }
     
     h5{
+        font-family: 'Montserrat', sans-serif;
         margin-top:10px;
         font-size: 18px;
         color: black;
@@ -38,6 +54,8 @@
     }
 
     p{
+        font-family: 'Montserrat', sans-serif;
+
         margin-top:0px;
         font-size: 12px;
         color: black;
@@ -52,7 +70,7 @@
         margin-top:100px;
         background: white;
         border:solid 0.6px;
-        border-color:#698ff0;
+        border-color:#e4e1e1;
         border-radius: 10px;
     }
     
@@ -60,21 +78,21 @@
         margin-top:15px;
         border:none;
         border-radius:5px;
-        background: white;
+        background: #698ff0;
         width: 300px;
         height: 50px;
-        color: #698ff0;
+        color: white;
         font-weight: medium;
         font-size:16px;
         cursor: pointer;
     }
 
     #enter:hover{
-        background:#698ff0;
-        color: white;
+        background:white;
+        color: #698ff0;
         border:none;
         border:solid 2px;
-        border-color: white;
+        border-color: #698ff0;
     }
 
     .enter_button{
@@ -111,6 +129,7 @@
         border:solid 2px;
         border-color:#698ff0;
     }
+
 }
 
 /* comes into effect for screens less than or equal to 320 pixels */

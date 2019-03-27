@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel = "stylesheet" type = "text/css" href = "CSS/stylesheet.css" />
     <link href="https://fonts.googleapis.com/css?family=Heebo:300" rel="stylesheet">
+    <link rel="icon" href="LogoIcon.png" type="image/png" sizes="20x20">
 </head>
 
 <body>
@@ -40,6 +41,7 @@
     ?>
 
     <main>
+        <img src="Logo.png" class="logo" alt="File Air Logo">
         <h3>Sign in</h3>
         <h4>to continue to share.</h4>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
