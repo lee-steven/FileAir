@@ -25,46 +25,56 @@
 ?>
     <section class="sidebar-home">
         <nav>
-            <h3>Welcome</h3>
-            <img src="default.png" alt="Avatar" class="avatar">
-            <h3><?php echo $username ?></h3>
+            <img src="Logo2.png" class="logo" alt="File Air Logo">
 
-            <form action="buff-logout.php" method="post">
-                <input type="submit" value="Logout">
-            </form>
+            <!-- <img src="default.png" alt="Avatar" class="avatar"> -->
+            
+            <h3>Welcome, <?php echo $username ?>!</h3>
+            <div class="logButton">
+                <form action="buff-logout.php" method="post">
+                    <input type="submit" value="Logout">
+                </form>
+            </div>
+
+            
         </nav>
-
     </section>
 
     <section class="info-home">
                 
+        <h3>Home</h3>
+        <h6>Files</h6><hr>
+        
+        <main>
+            <?php
+                $path   = sprintf("/opt/lampp/htdocs/uploads/%s", $username);
+                $files = array_diff(scandir($path), array('.', '..'));
+
+                foreach ($files as $file){
+                    $pathFile  = sprintf("uploads/%s/%s", $username, $file);
+                    echo '<a href="' .$pathFile . '">' . trim($file) . '</a>';
+
+                    echo '<form name="delete" action="deleted.php" method="POST">';
+                        echo '<button type="submit" name = "deleteButton" value="'.$file.'">Delete</button>';
+                    echo '</form>';
+                    echo '</br>';
+                    echo '</br>';
+                }
+            ?>
+        </main>
+    </section>
+
+    <section class="home-upload">
         <form enctype="multipart/form-data" action="upload.php" method="POST">
             <p>
                 <input type="hidden" name="MAX_FILE_SIZE" value="20000000"/>
                 <label for="uploadfile_input">Choose a file to upload:</label>
                 <input name="uploadedfile" type="file" id="uploadfile_input"/>
             </p>
-
             <p>
                 <input type="submit" value="Upload File" />
             </p>
         </form>
-
-        <?php
-            $path   = sprintf("/opt/lampp/htdocs/uploads/%s", $username);
-            $files = array_diff(scandir($path), array('.', '..'));
-
-            foreach ($files as $file){
-                $pathFile  = sprintf("uploads/%s/%s", $username, $file);
-                echo '<a href="' .$pathFile . '">' . trim($file) . '</a>';
-
-                echo '<form name="delete" action="deleted.php" method="POST">';
-                    echo '<button type="submit" name = "deleteButton" value="'.$file.'">Delete</button>';
-                echo '</form>';
-                echo '</br>';
-                echo '</br>';
-            }
-        ?>
     </section>
     
 </body>
