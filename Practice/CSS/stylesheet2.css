@@ -125,3 +125,11 @@ form {
     font-size:14px;
     cursor: pointer;
 }
+
+.home-upload input[type="submit"]:hover{
+    background: white;
+    color: #698ff0;
+    border: none;
+    border:solid 2px;
+    border-color:#698ff0;
+}
