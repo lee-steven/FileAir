@@ -1,0 +1,44 @@
+form {
+    display: inline;
+}
+
+.sidebar-home{
+    position: absolute;
+    left:0; top:0px; bottom: 0;
+    width: 300px;
+    border: none;
+    background: #698ff0;
+    padding: 20px;
+    margin: 0px;
+    height:100vh;
+
+}
+
+.sidebar-home nav{
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-size: 30px;
+}
+
+.sidebar-home nav img{
+    vertical-align: middle;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.info-home{
+    position: absolute;
+    left:340px; top:0px; right:0; bottom:0;
+    width: 200vh;
+    height: 100vh;
+    padding: 20px;
+    background-color: #f1f1f1;
+}
+/* .avatar{
+    vertical-align: middle;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+} */

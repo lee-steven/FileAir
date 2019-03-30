@@ -1,5 +1,11 @@
 <!DOCTYPE html>
-<head></head>
+<head>
+    <link rel="icon" href="LogoIcon.png" type="image/png" sizes="20x20">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel = "stylesheet" type = "text/css" href = "CSS/stylesheet2.css" />
+    <link href="https://fonts.googleapis.com/css?family=Heebo:300" rel="stylesheet">
+    <link rel="icon" href="LogoIcon.png" type="image/png" sizes="20x20">
+</head>
 <body>
 <?php
     session_start();
@@ -14,38 +20,52 @@
         header("Location: login.php");
         exit();
     }
+
+
 ?>
+    <section class="sidebar-home">
+        <nav>
+            <h3>Welcome</h3>
+            <img src="default.png" alt="Avatar" class="avatar">
+            <h3><?php echo $username ?></h3>
 
-    <form enctype="multipart/form-data" action="upload.php" method="POST">
-        <p>
-            <input type="hidden" name="MAX_FILE_SIZE" value="20000000"/>
-            <label for="uploadfile_input">Choose a file to upload:</label>
-            <input name="uploadedfile" type="file" id="uploadfile_input"/>
-        </p>
+            <form action="buff-logout.php" method="post">
+                <input type="submit" value="Logout">
+            </form>
+        </nav>
 
-        <p>
-            <input type="submit" value="Upload File" />
-        </p>
-    </form>
+    </section>
 
-    <form action="buff-logout.php" method="post">
-        <input type="submit" value="Logout">
-    </form>
-    </br>
-    <?php
-        $path   = sprintf("/opt/lampp/htdocs/uploads/%s", $username);
-        $files = array_diff(scandir($path), array('.', '..'));
+    <section class="info-home">
+                
+        <form enctype="multipart/form-data" action="upload.php" method="POST">
+            <p>
+                <input type="hidden" name="MAX_FILE_SIZE" value="20000000"/>
+                <label for="uploadfile_input">Choose a file to upload:</label>
+                <input name="uploadedfile" type="file" id="uploadfile_input"/>
+            </p>
 
-        foreach ($files as $file){
-            $pathFile  = sprintf("uploads/%s/%s", $username, $file);
-            echo '<a href="' .$pathFile . '">' . trim($file) . '</a>';
+            <p>
+                <input type="submit" value="Upload File" />
+            </p>
+        </form>
 
-            echo ' <form  action="deleted.php" method="POST">';
-                echo '<input type="submit" name = "deleteFile" value="Delete" />';
-            echo '</form>';
-        }
-    ?>
+        <?php
+            $path   = sprintf("/opt/lampp/htdocs/uploads/%s", $username);
+            $files = array_diff(scandir($path), array('.', '..'));
 
+            foreach ($files as $file){
+                $pathFile  = sprintf("uploads/%s/%s", $username, $file);
+                echo '<a href="' .$pathFile . '">' . trim($file) . '</a>';
+
+                echo '<form name="delete" action="deleted.php" method="POST">';
+                    echo '<button type="submit" name = "deleteButton" value="'.$file.'">Delete</button>';
+                echo '</form>';
+                echo '</br>';
+                echo '</br>';
+            }
+        ?>
+    </section>
     
 </body>
 </html>
