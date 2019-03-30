@@ -2,37 +2,40 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
+    <title>Delete File</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script>
+    <link rel="stylesheet" type="text/css" href="CSS/stylesheet.css" />
+    <link href="https://fonts.googleapis.com/css?family=Heebo:300" rel="stylesheet">
+    <link rel="icon" href="LogoIcon.png" type="image/png" sizes="20x20">
 </head>
 <body>
-    <?php
-        session_start();
 
-        $username= $_SESSION['login_user'];
-        if (isset( $_SESSION['login_user'])){
-            // Grab user data from the database using the user_id
-            // Let them access the "logged in only" pages
+    <section class="loading">
+        <?php
+            session_start();
 
-        } else {
-            // Redirect them to the login page
-            header("Location: login.php");
-            exit();
-        }
+            $username= $_SESSION['login_user'];
+            if (isset( $_SESSION['login_user'])){
+                // Grab user data from the database using the user_id
+                // Let them access the "logged in only" pages
 
-        $path   = sprintf("/opt/lampp/htdocs/uploads/%s", $username);
-
-        if($_SERVER['REQUEST_METHOD']=='POST'){
-            if (isset($_POST['deleteButton'])) {
-                $value = $_POST['deleteButton'];
-                $path   = sprintf("/opt/lampp/htdocs/uploads/%s/%s", $username, $value);
-                unlink($path);
-                echo $value . " has been deleted!";
+            } else {
+                // Redirect them to the login page
+                header("Location: login.php");
+                exit();
             }
-        }
-    ?>
+
+            $path   = sprintf("/opt/lampp/htdocs/uploads/%s", $username);
+
+            if($_SERVER['REQUEST_METHOD']=='POST'){
+                if (isset($_POST['deleteButton'])) {
+                    $value = $_POST['deleteButton'];
+                    $path   = sprintf("/opt/lampp/htdocs/uploads/%s/%s", $username, $value);
+                    unlink($path);
+                    echo $value . " has been deleted!";
+                }
+            }
+        ?>
+    </section>
 </body>
 </html>

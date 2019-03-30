@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Upload</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="CSS/stylesheet.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
@@ -20,6 +20,7 @@
         exit();
     }
 
+    echo '<section class="loading">';
     $filename = basename($_FILES['uploadedfile']['name']);
     if( !preg_match('/^[\w_\.\-]+$/', $filename)){
         echo "Invalid filename";
@@ -34,6 +35,7 @@
     else{
         echo "Upload Failed";
     }
+    echo'</section>';
 ?>
 </body>
 </html>

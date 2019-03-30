@@ -3,13 +3,11 @@
     
     html{
         font-family: 'Heebo', sans-serif;
-
-    }
-
-
-    body{
-        background: url(Background.jpg);
-        background-position: center;
+        background: url(Background.jpg) no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
     }
 
     .logo{
@@ -123,11 +121,17 @@
     }
 
     #sign_in:hover{
-        background: white;
+        background: none;
         color: #698ff0;
         border: none;
         border:solid 2px;
         border-color:#698ff0;
+    }
+
+    .loading{
+        text-align: center;
+        font-size: 40px;
+        margin-top: 280px;
     }
 
 }

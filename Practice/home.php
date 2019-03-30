@@ -7,27 +7,25 @@
     <link rel="icon" href="LogoIcon.png" type="image/png" sizes="20x20">
 </head>
 <body>
-<?php
-    session_start();
+    <?php
+        session_start();
 
-    $username= $_SESSION['login_user'];
-    if (isset( $_SESSION['login_user'])){
-        // Grab user data from the database using the user_id
-        // Let them access the "logged in only" pages
+        $username= $_SESSION['login_user'];
+        if (isset( $_SESSION['login_user'])){
+            // Grab user data from the database using the user_id
+            // Let them access the "logged in only" pages
 
-    } else {
-        // Redirect them to the login page
-        header("Location: login.php");
-        exit();
-    }
+        } else {
+            // Redirect them to the login page
+            header("Location: login.php");
+            exit();
+        }
 
 
-?>
+    ?>
     <section class="sidebar-home">
         <nav>
             <img src="Logo2.png" class="logo" alt="File Air Logo">
-
-            <!-- <img src="default.png" alt="Avatar" class="avatar"> -->
             
             <h3>Welcome, <?php echo $username ?>!</h3>
             <div class="logButton">
@@ -54,9 +52,9 @@
                     $pathFile  = sprintf("uploads/%s/%s", $username, $file);
                     echo '<a href="' .$pathFile . '">' . trim($file) . '</a>';
 
-                    echo '<form name="delete" action="deleted.php" method="POST">';
+                    echo '<span class="align-button"><form name="delete" action="deleted.php" method="POST">';
                         echo '<button type="submit" name = "deleteButton" value="'.$file.'">Delete</button>';
-                    echo '</form>';
+                    echo '</form></span>';
                     echo '</br>';
                     echo '</br>';
                 }
