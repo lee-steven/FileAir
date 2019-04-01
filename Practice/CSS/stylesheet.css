@@ -1,6 +1,6 @@
 /* comes into effect for screens larger than or equal to 481 pixels */
-@media screen and (min-width: 500px) {
-    
+/* @media screen and (min-width: 500px) {
+     */
     html{
         font-family: 'Heebo', sans-serif;
         background: url(Background.jpg) no-repeat center center fixed; 
@@ -60,16 +60,17 @@
         text-align: center;
     }
 
-    main{
+    main .login{
         text-align: center;
         width:450px;
         height:500px;
         margin:auto;
-        margin-top:100px;
+        margin-top:0px;
         background: white;
         border:solid 0.6px;
         border-color:#e4e1e1;
         border-radius: 10px;
+        padding: 10px;
     }
     
     #enter{
@@ -128,57 +129,67 @@
         border-color:#698ff0;
     }
 
-
-
-}
-
-/* comes into effect for screens less than or equal to 320 pixels */
-@media screen and (max-width: 499px) {
-    html{
-        font-family: 'Heebo', sans-serif;
-        background: white;
-    }
-    
-    h3{
-        text-align:center;
-        font-size: 24px;
-        font-weight: bold;
-        margin-top: 100px;
-        margin-bottom: 0px;
+    .file-load{
+        text-align: center;
+        margin-top: 185px;
     }
 
-    h4{
+
+    main a{
+        text-decoration: none;
         font-size: 14px;
         font-weight: bold;
-        margin-top:10px;
-        margin-bottom:30px;
-    }
-    
-    main{
-        text-align: center;
-        margin:auto;
-        margin-top:100px;
-    }
-    
-    #user{
-        width: 300px;
-        height: 50px;
-        font-size: 16px;
-        border:none;
-        border:solid 1px;
-        border-radius:5px;
-        border-color:#E4E4E4;
+        float: left;
+        margin-left:67px;
+        margin-top: 50px;
+        color: #698ff0;
+        background-color: white;
+        padding: 4px;
+        border-radius: 3px;
     }
 
-    #sign_in{
-        margin-top:15px;
-        border:none;
-        border-radius:5px;
-        background: #698ff0;
-        width: 300px;
-        height: 50px;
-        color: white;
-        font-weight: medium;
-        font-size:16px;
+     main a:hover{
+        text-decoration: none;
+        float:left;
+        background-color: #eff3ffa6;
+        padding: 4px;
+        border-radius: 3px;
+     }
+
+     main .create-account{
+        text-align: center;
+        width:500px;
+        height:500px;
+        margin:auto;
+        margin-top:0px;
+        background: white;
+        border:solid 0.6px;
+        border-color:#e4e1e1;
+        border-radius: 10px;
+        padding: 10px;
+     }
+
+    .back-butt .previous {
+        background-color: #ddd;
+        color: black;
     }
-}
+
+    .back-butt .round {
+        border-radius: 50%;
+    }
+    
+    .back-butt a {
+        text-decoration: none;
+        display: inline-block;
+        padding: 12px 30px;
+        margin:30px;
+        margin-bottom:0px;
+        font-size: 30px;
+    }
+  
+    .back-butt a:hover {
+        background-color: #698ff0;
+        color: white;
+    }
+
+/* } */

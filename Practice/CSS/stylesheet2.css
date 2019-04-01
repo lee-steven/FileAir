@@ -1,5 +1,7 @@
 html{
     font-family: 'Heebo', sans-serif;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 form {
@@ -102,6 +104,11 @@ form {
     color: #cccaca;
 }
 
+.info-home main hr{
+    color: #f1f1f1;
+    margin-top:-7px;
+}
+
 .info-home main{
     font-size: 13px;
 }
@@ -112,7 +119,7 @@ form {
 
 .home-upload{
     position: absolute;
-    left:1230px; top:0px; bottom: 0;
+    left:1200px; top:0px; bottom: 0;
     width: 230px;
     margin: 0px;
 }
@@ -155,7 +162,7 @@ form {
     margin: -75px 0 0 -75px;
     border: 16px solid #f3f3f3;
     border-radius: 50%;
-    border-top: 16px solid#698ff0;
+    border-top: 16px solid#94C5ED;
     width: 120px;
     height: 120px;
     -webkit-animation: spin 2s linear infinite;

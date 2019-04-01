@@ -39,16 +39,23 @@
         exit();
     }
     ?>
+    <div class="back-butt">
+        <a href="welcome.html" class="previous round">&#8249;</a>
+    </div>
 
     <main>
+        <div class="login">
+            
         <img src="Logo.png" class="logo" alt="File Air Logo">
         <h3>Sign in</h3>
         <h4>to continue to share.</h4>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
-            <input type="text" id="user" name="user" />
+            <input type="text" id="user" placeholder="Username" name="user" />
             </br>
             <input type="submit" id="sign_in" value="Sign in"/>
         </form>
+        <a href=sign-up.php >Create account</a>
+</div>
     </main>
 </body>
 </html> 

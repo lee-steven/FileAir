@@ -10,7 +10,12 @@
 </head>
 <body>
 
-    <section class="loading">
+    <div class="back-butt">
+        <a href="home.php" class="previous round">&#8249;</a>
+    </div>
+    
+    <section class="file-load">
+
         <?php
             session_start();
 
