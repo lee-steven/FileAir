@@ -27,14 +27,17 @@
         <nav>
             <img src="Logo2.png" class="logo" alt="File Air Logo">
             
-            <h3>Welcome, <?php echo $username ?>!</h3>
+            <h3>Welcome, <?php echo trim($username) ?>!</h3>
             <div class="logButton">
                 <form action="buff-logout.php" method="post">
                     <input type="submit" value="Logout">
                 </form>
             </div>
-
-            
+            <div class="side-nav">
+                <a href="">Home</a>
+                <a href="">Recents</a>
+                <a href="">Starred</a>
+            </div>
         </nav>
     </section>
 
@@ -42,7 +45,6 @@
                 
         <h3>Home</h3>
         <h6>Files</h6><hr>
-        
         <main>
             <?php
                 $path   = sprintf("/opt/lampp/htdocs/uploads/%s", $username);
@@ -50,13 +52,16 @@
 
                 foreach ($files as $file){
                     $pathFile  = sprintf("uploads/%s/%s", $username, $file);
+                    echo '<label for="star">&#9733</label>';
+
                     echo '<a href="' .$pathFile . '">' . trim($file) . '</a>';
 
                     echo '<span class="align-button"><form name="delete" action="deleted.php" method="POST">';
-                        echo '<button type="submit" name = "deleteButton" value="'.$file.'">Delete</button>';
+                        echo '<button type="submit" name = "deleteButton" value="'.$file.'">delete.</button>';
                     echo '</form></span>';
                     echo '</br>';
                     echo '</br>';
+                    echo '<hr>';
                 }
             ?>
         </main>

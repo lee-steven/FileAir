@@ -17,6 +17,7 @@ form {
     padding: 20px;
     margin: 0px;
     height:100vh;
+    word-break: break-all;
 }
 
 .sidebar-home nav h3{
@@ -33,13 +34,6 @@ form {
     margin-right:10px;
 }
 
-.sidebar-home nav .avatar{
-    display:inline-block;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-
-}
 .logButton{
     text-align:center;
 }
@@ -47,6 +41,7 @@ form {
     border:none;
     border-radius:5px;
     background: #698ff0;
+    margin-bottom: 50px;
     width: 175px;
     height: 30px;
     color: white;
@@ -63,17 +58,40 @@ form {
     border-color:#698ff0;
 }
 
-.sidebar-home .sidebar-upload{
-    text-align: center;
+/* Navigation Sidebar */
+/* .sidebar-home nav .side-nav{
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+}
+.sidebar-home nav .side-nav a {
+    display: block;
     color: #6e6e6e;
-    border:solid;
-    border-color: #e0e0e0;
-    border-width: 1.5px;
-    border-radius: 5px;
-    padding:20px;
-    padding-top:40px;
-    padding-bottom:40px;
-    margin-top:100px;
+    padding: 16px;
+    text-decoration: none;
+}
+ 
+.sidebar-home nav .side-nav a.active {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+.sidebar-home nav .side-nav a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+  } */
+.sidebar-home nav .side-nav a{
+    display: block;
+    text-decoration: none;
+    color: #6e6e6e;
+    padding: 15px 6px 6px 6px;
+    width: 100%;
+}
+.sidebar-home nav .side-nav a:hover{
+    background: #dadada;
 }
 
 .info-home{
@@ -112,9 +130,34 @@ form {
 .info-home main{
     font-size: 13px;
 }
+main label[for="star"]{
+    font-size: 15px;
+    margin-right:16px;
+    color: #e7e7e7;
+}
+main label[for="star"]:hover{
+    color: #698ff0;
+}
 
+/* Delete Button  */
 .info-home main .align-button{
     float:right;
+}
+.info-home main .align-button button{
+    border: solid;
+    border-color: #698ff0;
+    border-width:1px;
+    background-color:#698ff0;
+    border-radius: 2px;
+    padding: 4px 4px 4px 4px;
+    color: white;
+}
+.info-home main .align-button button:hover{
+    background-color: white;
+    color: #698ff0;
+    border: solid; 
+    border-color: #698ff0;
+    border-width:1px;
 }
 
 .home-upload{

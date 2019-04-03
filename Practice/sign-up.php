@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Heebo:300" rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="screen" href="CSS/stylesheet.css" />
+    <link rel="icon" href="LogoIcon.png" type="image/png" sizes="20x20">
+
 </head>
 <body>
     <div class="back-butt">
@@ -17,12 +19,42 @@
             <img src="Logo.png" class="logo" alt="File Air Logo">
             <h3>Create your FileAir Account</h3>
             <h4>to continue to FileShare</h4>
+            <?php
+                if(isset($_POST['new-user'])){
+                    $username=$_POST['new-user'];
+                    $h= fopen("users.txt", "r");
+
+                    //Boolean to see if username was found
+                    $validator = FALSE;
+
+                    //Reading File Line-by-Line
+                    while(!feof($h)){
+                        if($_POST['new-user'] == trim(fgets($h))){
+                            $validator = TRUE;
+                        }
+                    }
+                    
+                    //Checking if validator returned true or false to check if username was in txt file.
+                    if($validator== TRUE){
+                        echo '<label for="fail-sign-up">This username already exists!</label>';
+                    }
+                    else{
+                        echo '<label for="success-sign-up">Your account has been created successfully!</label>';
+                        $text = PHP_EOL . $username;
+                        file_put_contents("users.txt", $text, FILE_APPEND);
+                        mkdir("/opt/lampp/htdocs/uploads/". $username, 0757,true);
+                    }
+                    fclose($h);
+                }
+            ?>
             <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
-                <input type="text" id="user" placeholder="Enter a valid username" name="user" />
+                <input type="text" id="new-user" placeholder="Enter a valid username" name="new-user" />
                 </br>
                 <input type="submit" id="sign_in" value="Continue"/>
             </form>
         </div>
     </main>
+
+
 </body>
 </html>
