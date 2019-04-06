@@ -130,15 +130,26 @@ form {
 .info-home main{
     font-size: 13px;
 }
-main label[for="star"]{
-    font-size: 15px;
-    margin-right:16px;
+
+main .star{ 
+    border: none;
     color: #e7e7e7;
+    font-size: 15px;
+    margin-right: 16px;
+    cursor:pointer;
 }
-main label[for="star"]:hover{
+main .star:hover{
     color: #698ff0;
 }
-
+main .starred{
+    border: none;
+    color: #698ff0;
+    font-size: 15px;
+    margin-right: 16px;
+}
+main .starred:hover{
+    color: #e7e7e7;
+}
 /* Delete Button  */
 .info-home main .align-button{
     float:right;
