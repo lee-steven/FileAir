@@ -37,8 +37,8 @@
                     $value = $_POST['shared'];
 
                     //copy folder into shared user's folder
-                    $path   = sprintf("/opt/lampp/htdocs/uploads/%s/%s", $username, $value);
-                    $newPath = sprintf("/opt/lampp/htdocs/uploads/%s/%s", $selectOption, $value);
+                    $path   = sprintf("/home/stevenlee/Module2Info/uploads/%s/%s", $username, $value);
+                    $newPath = sprintf("/home/stevenlee/Module2Info/uploads/%s/%s", $selectOption, $value);
                     
                     if (!copy($path, $newPath)) {
                         echo "Failed to copy " .$value. " with " . $selectOption;

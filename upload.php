@@ -30,7 +30,7 @@
             exit;
         }
         
-        $full_path=sprintf("/opt/lampp/htdocs/uploads/%s/%s", $username, $filename);
+        $full_path=sprintf("/home/stevenlee/Module2Info/uploads/%s/%s", $username, $filename);
 
         if(move_uploaded_file($_FILES['uploadedfile']['tmp_name'], $full_path)){
             echo "Upload Successful";

@@ -46,26 +46,31 @@
         <h6>Files</h6><hr>
         <main>
             <?php
-                $path   = sprintf("/opt/lampp/htdocs/uploads/%s", $username);
+                $path   = sprintf("/home/stevenlee/Module2Info/uploads/%s", $username);
                 $files = array_diff(scandir($path), array('.', '..'));
 
                 foreach ($files as $file){
                     //To prevent star.txt file from showing up on list
                     if($file != "star.txt"){
-                        $pathFile  = sprintf("uploads/%s/%s", $username, $file);
+                        $pathFile  = sprintf("/home/stevenlee/Module2Info/uploads/%s/%s", $username, $file);
                         
                         echo '<form name="star" action="starred.php" method="POST">';
                             echo '<button type="submit" class="star" name = "star" value="'.$file.'">&#9733</button>';
                         echo '</form>';
 
-                        echo '<a href="' .$pathFile . '">' . trim($file) . '</a>';
-                        
+                        echo trim($file);
+
+
                         echo '<span class="align-button"><form name="delete" action="deleted.php" method="POST">';
                             echo '<button type="submit" name = "deleteButton" value="'.$file.'">delete.</button>';
                         echo '</form></span>';
 
                         echo'<span class="align-button"><form name="share" action="share.php" method="POST">';
                             echo '<button type="submit" name="shareButton" value="'.$file.'">share.</button>';
+                        echo '</form></span>';
+
+                        echo '<span class="align-button"><form name="view" action="view.php" method="POST">';
+                            echo '<button type="submit" name="viewButton" value="'.$file.'">view.</button>';
                         echo '</form></span>';
 
                         echo '</br>';

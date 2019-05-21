@@ -16,13 +16,13 @@
     </div>
     <main>
         <div class="create-account">
-            <img src="Logo.png" class="logo" alt="File Air Logo">
+            <img src="Logo2.png" class="logo" alt="File Air Logo">
             <h3>Create your FileAir Account</h3>
             <h4>to continue to FileShare</h4>
             <?php
                 if(isset($_POST['new-user'])){
                     $username=$_POST['new-user'];
-                    $h= fopen("users.txt", "r");
+                    $h= fopen("/home/stevenlee/Module2Info/users.txt", "r");
 
                     //Boolean to see if username was found
                     $validator = FALSE;
@@ -41,9 +41,9 @@
                     else{
                         echo '<label for="success-sign-up">Your account has been created successfully!</label>';
                         $text = PHP_EOL . $username;
-                        file_put_contents("users.txt", $text, FILE_APPEND);
-                        mkdir("/opt/lampp/htdocs/uploads/". $username, 0757,true);
-                        $filename = sprintf("/opt/lampp/htdocs/uploads/%s/%s", $username, "star.txt");
+                        file_put_contents("/home/stevenlee/Module2Info/users.txt", $text, FILE_APPEND);
+                        mkdir("/home/stevenlee/Module2Info/uploads/". $username, 0757,true);
+                        $filename = sprintf("/home/stevenlee/Module2Info/uploads/%s/%s", $username, "star.txt");
                         $handle = fopen($filename, 'w') or die('cannot open the file');
                         fclose($handle);
                         chmod($filename, 0757);

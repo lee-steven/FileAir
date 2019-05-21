@@ -15,8 +15,7 @@
 
     if(isset($_POST['user'])){
         //Open using file handler
-        $h= fopen("users.txt", "r");
-
+        $h= fopen("/home/stevenlee/Module2Info/users.txt", "r");
         //Boolean to see if username was found
         $validator = FALSE;
 
@@ -46,7 +45,7 @@
     <main>
         <div class="login">
             
-        <img src="Logo.png" class="logo" alt="File Air Logo">
+        <img src="Logo2.png" class="logo" alt="File Air Logo">
         <h3>Sign in</h3>
         <h4>to continue to share.</h4>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">

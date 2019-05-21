@@ -30,12 +30,12 @@
                 exit();
             }
 
-            $path   = sprintf("/opt/lampp/htdocs/uploads/%s", $username);
+            $path   = sprintf("/home/stevenlee/Module2Info/uploads/%s", $username);
 
             if($_SERVER['REQUEST_METHOD']=='POST'){
                 if (isset($_POST['deleteButton'])) {
                     $value = $_POST['deleteButton'];
-                    $path   = sprintf("/opt/lampp/htdocs/uploads/%s/%s", $username, $value);
+                    $path   = sprintf("/home/stevenlee/Module2Info/uploads/%s/%s", $username, $value);
                     unlink($path);
                     echo $value . " has been deleted!";
                 }

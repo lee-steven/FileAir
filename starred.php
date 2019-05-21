@@ -33,7 +33,7 @@
             if($_SERVER['REQUEST_METHOD']=='POST'){
                 if (isset($_POST['star'])) {
                     $value = $_POST['star'];
-                    $path   = sprintf("/opt/lampp/htdocs/uploads/%s/%s", $username, "star.txt");
+                    $path   = sprintf("/home/stevenlee/Module2Info/uploads/%s/%s", $username, "star.txt");
                     $h= fopen($path, "r");
                     //Boolean to see if username was found
                     $validator = FALSE;

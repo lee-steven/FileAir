@@ -38,7 +38,7 @@
                     echo " with?";
                     echo '<form name = "share" action="shared.php" method="POST">';
                         echo '<select name="sharedUser">';
-                            $g= fopen("users.txt", "r");
+                            $g= fopen("/home/stevenlee/Module2Info/users.txt", "r");
                             while(!feof($g)){
                                 $temp = trim(fgets($g));
                                 if($username != $temp){

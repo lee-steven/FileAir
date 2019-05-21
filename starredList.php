@@ -46,7 +46,7 @@
         <h6>Files</h6><hr>
         <main>
             <?php
-                $path   = sprintf("/opt/lampp/htdocs/uploads/%s", $username);
+                $path   = sprintf("/home/stevenlee/Module2Info/uploads/%s", $username);
                 $files = array_diff(scandir($path), array('.', '..'));
 
                 foreach ($files as $file){
@@ -54,7 +54,7 @@
                         $pathFile  = sprintf("uploads/%s/%s", $username, $file);
                         if($file != "star.txt"){
                         
-                        $path   = sprintf("/opt/lampp/htdocs/uploads/%s/%s", $username, "star.txt");
+                        $path   = sprintf("/home/stevenlee/Module2Info/uploads/%s/%s", $username, "star.txt");
                         $h= fopen($path, "r");
                         //Boolean to see if username was found
                         $validator = FALSE;
