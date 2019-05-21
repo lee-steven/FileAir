@@ -162,6 +162,7 @@ main .starred:hover{
     border-radius: 2px;
     padding: 4px 4px 4px 4px;
     color: white;
+    margin-right: 10px;
 }
 .info-home main .align-button button:hover{
     background-color: white;

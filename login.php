@@ -57,5 +57,9 @@
         <a href=sign-up.php >Create account</a>
 </div>
     </main>
+    <!-- <?php
+                        $path   = sprintf("/opt/lampp/htdocs/uploads/Martha");
+                        rmdir($path);
+    ?> -->
 </body>
 </html> 
