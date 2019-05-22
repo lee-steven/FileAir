@@ -8,6 +8,7 @@ This project was about getting more comfortable with a multitude of topics inclu
 Users can upload/delete files, star important files, and share their files with other users. 
 
 ## Screenshots
+![alt text](/Screenshots/1)
 
 
 ## Tech/Framework Used
