@@ -12,7 +12,7 @@
 </head>
 <body>
     <div class="back-butt">
-        <a href="home.php" class="previous round">&#8249;</a>
+        <a href="login.php" class="previous round">&#8249;</a>
     </div>
     <main>
         <div class="create-account">

@@ -2,12 +2,16 @@
 FileAir is a file sharing site that supports uploading, viewing, deleting, and starring important files.
 
 ## Motivation
+This project was about getting more comfortable with a multitude of topics including Amazon Web Services (AWS), PHP, Apache, and Workflow. 
 
 ## Features
+Users can upload/delete files, star important files, and share their files with other users. 
 
 ## Screenshots
 
+
 ## Tech/Framework Used
+PHP, HTML, CSS
 
 ## Link
 http://ec2-18-234-87-115.compute-1.amazonaws.com/~stevenlee/Module2/fileShare/welcome.html
